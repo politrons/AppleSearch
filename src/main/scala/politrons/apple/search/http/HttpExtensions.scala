@@ -1,4 +1,4 @@
-package appleSearch.http
+package politrons.apple.search.http
 
 import scala.util.parsing.json._
 import scalaj.http.{HttpRequest, HttpResponse}

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.json4s:json4s-core_2.10:3.4.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.json4s/json4s-core_2.10/3.4.1/39069cd6da9547c84e8395437b6457176a170820/json4s-core_2.10-3.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.json4s/json4s-core_2.10/3.4.1/594e1ff10130132e38cef97da3a5741ec9c060c2/json4s-core_2.10-3.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

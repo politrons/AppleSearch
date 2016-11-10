@@ -1,67 +1,32 @@
-//ext {
-//    resolveSystemOrEnvProperty = { String name, defaultValue = null ->
-//        if (System.properties.containsKey(name)) return System.properties[name]
-//        if (System.env.containsKey(name)) return System.env[name]
-//        return defaultValue
-//    }
-//    majorMinorVersion = "4.0"
-//    host = resolveSystemOrEnvProperty("HOST", "http://localhost:8080")
-//}
+ext {
+    resolveSystemOrEnvProperty = { String name, defaultValue = null ->
+        if (System.properties.containsKey(name)) return System.properties[name]
+        if (System.env.containsKey(name)) return System.env[name]
+        return defaultValue
+    }
+    majorMinorVersion = "4.0"
+    host = resolveSystemOrEnvProperty("HOST", "http://localhost:8080")
+}
 
 version = '1.0'
 
-//
-//apply plugin: 'jvm-component'
-//apply plugin: 'java-lang'
-
-// Groovy must be first and the scala plugin does java/scala at the same time.
 apply plugin: 'scala'
-
-// Group and version artifact information
-// Placed here to avoid issues with the ordering of the included scripts.
-
-apply from: "gradle/library.gradle"
-
 
 repositories {
     mavenCentral()
 }
 
-//
-//dependencies {
-//    compile 'com.fasterxml.jackson.module:jackson-module-scala_2.10:2.8.3'
-//    compile 'com.couchbase.client:java-client:2.2.6'
-//    compile 'io.reactivex:rxscala_2.11:0.26.1'
-//    compile 'junit:junit:4.11'
-//    compile 'org.clapper:classutil_2.11:1.0.13'
-//}
-//
-////create a single Jar with all dependencies
-//task fatJar(type: Jar) {
-//    manifest {
-//        attributes 'Implementation-Title': 'Gradle Jar File Example',
-//                'Implementation-Version': version,
-//                'Main-Class': 'com.mkyong.DateUtils'
-//    }
-//    baseName = project.name + '-all'
-//    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-//    with jar
-//}
-//
-//
-//task wrapper(type: Wrapper) {
-//    gradleVersion = '2.14'
-//}
-//
-//
-//model {
-//    components {
-//        main(JvmLibrarySpec) {
-//            api {
-//                exports 'src.main.scala'
-//            }
-//        }
-//    }
-//}
-//
-//
+dependencies {
+    compile 'com.fasterxml.jackson.module:jackson-module-scala_2.10:2.8.3'
+    compile 'io.reactivex:rxscala_2.11:0.26.1'
+    compile 'junit:junit:4.11'
+    compile 'org.clapper:classutil_2.11:1.0.13'
+    compile "org.scalatest:scalatest_2.11:2+"
+    compile "org.scala-lang:scala-compiler:2.11.8"
+    compile "org.scala-lang:scala-library:2.11.8"
+    compile "org.scalaj:scalaj-http_2.11:2.3.0"
+    compile 'org.skyscreamer:jsonassert:1.3.0'
+    compile 'com.github.scala-incubator.io:scala-io-file_2.10:0.4.3'
+    compile 'org.json4s:json4s-jackson_2.10:3.4.1'
+}
+

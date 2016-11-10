@@ -1,11 +1,11 @@
-package appleSearch
+package politrons.apple.search
 
 import appleSearch.exceptions.AppleAPIException
-import appleSearch.http.HttpClient._
-import appleSearch.implicits.AppleUtils.optionalUtils
+import politrons.apple.search.http.HttpClient._
+import politrons.apple.search.implicits.AppleUtils.optionalUtils
 import appleSearch.model.app.{AppleStore, Application}
 import appleSearch.model.movie.{AppleTv, Movie}
-import appleSearch.model.music.{Album, DiscographyF}
+import politrons.apple.search.model.music.Album
 
 import scala.util.parsing.json.JSON._
 import scala.util.parsing.json._
@@ -26,12 +26,14 @@ object AppleSearch {
 
   private def findAlbums(artist: Option[String]): List[Album] = {
     get(s"$API${artist.get.replace(" ", "+")}", asJson, "https")
-    DiscographyF.albums(lastResponse.get)
+    List()
+//    DiscographyF.albums(lastResponse.get)
   }
 
   private def attachVideoClips(country: String, artist: Option[String], albums: List[Album]): List[Album] = {
     get(s"$API${artist.createQuery(country, "musicVideo")}", asJson, "https")
-    DiscographyF.attachVideos(lastResponse.get, albums)
+    List()
+//    DiscographyF.attachVideos(lastResponse.get, albums)
   }
 
   //Apps

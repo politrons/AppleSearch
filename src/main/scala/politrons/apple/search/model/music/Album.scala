@@ -1,7 +1,7 @@
-package appleSearch.model.music
+package politrons.apple.search.model.music
 
-import com.couchbase.client.deps.com.fasterxml.jackson.annotation.JsonProperty
-import com.fasterxml.jackson.annotation.{JsonCreator, JsonIgnoreProperties}
+import appleSearch.model.music.Song
+import com.fasterxml.jackson.annotation.{JsonCreator, JsonIgnoreProperties, JsonProperty}
 
 /**
   * Created by pabloperezgarcia on 27/8/16.

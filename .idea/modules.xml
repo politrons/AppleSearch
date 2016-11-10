@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AppleSearch.iml" filepath="$PROJECT_DIR$/AppleSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AppleSearch.iml" filepath="$PROJECT_DIR$/.idea/modules/AppleSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AppleSearch_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AppleSearch_main.iml" group="AppleSearch" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AppleSearch_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AppleSearch_test.iml" group="AppleSearch" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,4 @@
-package appleSearch.implicits
-
-import play.api.cache.CacheApi
+package politrons.apple.search.implicits
 
 import scala.util.parsing.json.{JSONArray, JSONObject}
 
@@ -39,12 +37,12 @@ object AppleUtils {
     def asStringMap: Map[String, Any] = jsonObject.obj
   }
 
-  implicit class cacheUtils[T](cache: CacheApi) {
-
-    def getVal[T](key: String): T = cache.get(key).get
-
-    def jsonArraySize(key:String): Int = getVal[JSONArray](key).list.size
-
-  }
+//  implicit class cacheUtils[T](cache: CacheApi) {
+//
+//    def getVal[T](key: String): T = cache.get(key).get
+//
+//    def jsonArraySize(key:String): Int = getVal[JSONArray](key).list.size
+//
+//  }
 
 }

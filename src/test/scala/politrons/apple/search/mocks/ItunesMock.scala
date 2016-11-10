@@ -27,7 +27,7 @@ object ItunesMock {
     val map = JSON.parseFull(source).get.asInstanceOf[Map[String, Any]]
     val jsonList= map.get("results").get.asInstanceOf[List[Map[String, Any]]]
     new JSONArray(jsonList)
-
+    ""
 
 
   }

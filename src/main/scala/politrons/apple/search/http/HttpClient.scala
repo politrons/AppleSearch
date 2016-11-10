@@ -1,7 +1,7 @@
-package appleSearch.http
+package politrons.apple.search.http
 
 import scala.util.parsing.json.JSONArray
-import scalaj.http.{HttpRequest, Http, HttpOptions}
+import scalaj.http.{Http, HttpOptions, HttpRequest}
 
 object HttpClient extends HttpExtensions {
 
