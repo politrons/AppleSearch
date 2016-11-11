@@ -1,6 +1,5 @@
 package politrons.apple.search.http
 
-import scala.util.parsing.json._
 import scalaj.http.{HttpRequest, HttpResponse}
 
 trait HttpExtensions {
@@ -19,7 +18,7 @@ trait HttpExtensions {
       request.header("content-type", "application/json")
     }
 
-    def asJson(function: HttpRequest => JSONArray):JSONArray = {
+    def asJson(function: HttpRequest => String):String = {
       function.apply(request)
     }
 

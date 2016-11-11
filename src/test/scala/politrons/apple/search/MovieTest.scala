@@ -1,21 +1,17 @@
+package politrons.apple.search
 
-import mocks.AppleTvMock
-import appleSearch.model.app.AppleStore
+import _root_.mocks.AppleTvMock
+import appleSearch.model.movie.Movie
 import org.junit.Test
 
 /**
   * Created by pabloperezgarcia on 18/8/16.
   */
-class MovieTest {
+class MovieTest extends BaseTest{
 
-  @Test def testMovie(): Unit = {
-    val jsonArray = AppleTvMock.mockApps()
-    val movies = AppleStore.applications(jsonArray)
-//    val movie = MovieFactory.create(jsonArray.first)
-//    assert(movie != null)
-    assert(movies.head.artistName.equals("Top Free Games"))
-
-
+  @Test def deserializeMovies(): Unit = {
+    val movies =  getJsonResults[Movie](AppleTvMock.mockApps())
+    assert(!movies.getResults.isEmpty)
   }
 
 }

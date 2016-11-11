@@ -5,13 +5,12 @@ import appleSearch.model.AppleBase
 /**
   * Created by pabloperezgarcia on 27/8/16.
   */
-class Song(trackName: String,
-           val previewUrl: String,
-           val trackPrice: String,
-           val trackViewUrl: String
-          ) extends AppleBase(null, trackName) {
+class Song(previewUrl: String,
+           trackPrice: String,
+           trackViewUrl: String
+          ) extends AppleBase {
 
-  var videoClip: VideoClip = null
+  var videoClip: VideoClip = _
 
   def addVideoClip(videoClip: VideoClip): Song = {
     this.videoClip = videoClip

@@ -7,13 +7,13 @@ import scala.util.parsing.json.{JSONArray, JSONObject}
   */
 object AppleUtils {
 
-  implicit class optionalUtils(option:Option[Any]){
-    def createQuery(country:String, entity:String):String = option.get.asInstanceOf[String]
-      .replace(" ", "+").concat(s"&country=$country&entity=$entity")
-  }
-
   implicit class anyUtils(any: Any) {
     def asStringMap: Map[String, Any] = any.asInstanceOf[Map[String, Any]]
+  }
+
+  implicit class stringUtils(s: String) {
+    def createQuery(country: String, entity: String): String = s.asInstanceOf[String]
+      .replace(" ", "+").concat(s"&country=$country&entity=$entity")
   }
 
   implicit class optionUtils(o: Option[Any]) {
@@ -37,12 +37,12 @@ object AppleUtils {
     def asStringMap: Map[String, Any] = jsonObject.obj
   }
 
-//  implicit class cacheUtils[T](cache: CacheApi) {
-//
-//    def getVal[T](key: String): T = cache.get(key).get
-//
-//    def jsonArraySize(key:String): Int = getVal[JSONArray](key).list.size
-//
-//  }
+  //  implicit class cacheUtils[T](cache: CacheApi) {
+  //
+  //    def getVal[T](key: String): T = cache.get(key).get
+  //
+  //    def jsonArraySize(key:String): Int = getVal[JSONArray](key).list.size
+  //
+  //  }
 
 }

@@ -1,21 +1,17 @@
 
+import appleSearch.model.app.Application
 import mocks.AppleStoreMock
-import appleSearch.model.app.AppleStore
 import org.junit.Test
+import politrons.apple.search.BaseTest
 
 /**
   * Created by pabloperezgarcia on 18/8/16.
   */
-class ApplicationTest {
+class ApplicationTest extends BaseTest {
 
-  @Test def testApplication(): Unit = {
-    val jsonArray = AppleStoreMock.mockApps()
-    val apps = AppleStore.applications(jsonArray)
-//    val app = ApplicationFactory.create(jsonArray.first)
-//    assert(app != null)
-    assert(apps.head.artistName.equals("Top Free Games"))
-
-
+  @Test def deserializeMovies(): Unit = {
+    val apps =  getJsonResults[Application](AppleStoreMock.mockApps())
+    assert(!apps.getResults.isEmpty)
   }
 
 }

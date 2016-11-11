@@ -1,39 +1,49 @@
 package politrons.apple.search.model.music
 
+import appleSearch.model.AppleBase
 import appleSearch.model.music.Song
-import com.fasterxml.jackson.annotation.{JsonCreator, JsonIgnoreProperties, JsonProperty}
 
 /**
   * Created by pabloperezgarcia on 27/8/16.
   */
-@JsonIgnoreProperties(ignoreUnknown = true)
-@JsonCreator
-class Album(@JsonProperty("artistName")val artistName: String
-//            ,
-//            val collectionName: String,
-//            val primaryGenreName: String,
-//            val country: String,
-//            val trackPrice: String,
-//            val trackViewUrl: String,
-//            val releaseDate: String,
-//            val trackName: String,
-//            val previewUrl: String,
-//            val artWorkUrl100: String
-           ){
-//  extends AppleBase(artistName, trackName) {
+class Album(collectionName: String = "",
+            primaryGenreName: String = "",
+            country: String = "",
+            trackPrice: String = "",
+            trackViewUrl: String = "",
+            releaseDate: String = "",
+            previewUrl: String = "",
+            artworkUrl100: String = ""
+           )
+  extends AppleBase {
 
   def this() {
     this("")
   }
+
+  def getCollectionName: String = collectionName
+
+  def getPrimaryGenreName: String = primaryGenreName
+
+  def getCountry: String = country
+
+  def getTrackPrice: String = trackPrice
+
+  def getTrackViewUrl: String = trackViewUrl
+
+  def getReleaseDate: String = releaseDate
+
+  def getPreviewUrl: String = previewUrl
+
+  def getArtworkUrl100: String = artworkUrl100
 
   def replace(song: Song): Album = {
     songs.map { case song => song }
     this
   }
 
-
-  var songs: List[Song] =List()
-//    List(new Song(trackName, previewUrl, trackPrice, trackViewUrl))
+  var songs: List[Song] = List()
+  //    List(new Song(trackName, previewUrl, trackPrice, trackViewUrl))
 
   def addSongs(song: Song) {
     songs = songs.::(song)
