@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acf358c1-7bf7-45c8-82f7-49502f71c229" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_typesafe_config_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_typesafe_play_play_datacommons_2_11_2_5_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_typesafe_play_play_functional_2_11_2_5_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_typesafe_play_play_iteratees_2_11_2_5_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_typesafe_play_play_json_2_11_2_5_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__joda_time_joda_time_2_9_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_joda_joda_convert_1_8_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_stm_scala_stm_2_11_0_7.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/Results.scala" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/AppleSearch.iml" afterPath="$PROJECT_DIR$/.idea/modules/AppleSearch.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/AppleSearch_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/AppleSearch_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/AppleSearch_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/AppleSearch_test.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/Deserializer.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppleSearch.scala" afterPath="$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppleSearch.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/AlbumTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/AlbumTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/ApplicationTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/ApplicationTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/BaseTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/BaseTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/MovieTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/MovieTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/mocks/AppleStoreMock.scala" afterPath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/mocks/AppleStoreMock.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/mocks/ItunesMock.scala" afterPath="$PROJECT_DIR$/src/test/scala/politrons/apple/search/mocks/ItunesMock.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -105,11 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AlbumTest.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AlbumTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/politrons/apple/search/AlbumTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            <state relative-caret-position="270">
+              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
               <folding>
                 <element signature="e#32#53#0" expanded="true" />
               </folding>
@@ -117,14 +98,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieTest.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/politrons/apple/search/MovieTest.scala">
+      <file leaf-file-name="ObjectMapper.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.3/a1e9c8ae4bd8ce4da2a2cb5630a09c155a6d8043/jackson-databind-2.8.3-sources.jar!/com/fasterxml/jackson/databind/ObjectMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-              <folding>
-                <element signature="e#32#63#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="2867" column="17" selection-start-line="2867" selection-start-column="17" selection-end-line="2867" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,24 +130,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonNode.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.3/a1e9c8ae4bd8ce4da2a2cb5630a09c155a6d8043/jackson-databind-2.8.3-sources.jar!/com/fasterxml/jackson/databind/JsonNode.java">
+      <file leaf-file-name="AppleSearch.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppleSearch.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="949" column="27" selection-start-line="949" selection-start-column="27" selection-end-line="949" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+              <folding>
+                <element signature="e#32#79#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppleSearch.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppleSearch.scala">
+      <file leaf-file-name="Deserializer.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/Deserializer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+            <state relative-caret-position="233">
+              <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
               <folding>
-                <element signature="e#32#48#0" expanded="true" />
+                <element signature="e#38#54#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Predef.scala" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/17178a95c4b47c0a9745cfb8d01924359824fd7c/scala-library-2.11.8-sources.jar!/scala/Predef.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="90" column="31" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,16 +169,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="122">
               <caret line="293" column="6" selection-start-line="293" selection-start-column="6" selection-end-line="293" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayNode.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.3/a1e9c8ae4bd8ce4da2a2cb5630a09c155a6d8043/jackson-databind-2.8.3-sources.jar!/com/fasterxml/jackson/databind/node/ArrayNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="810" column="18" selection-start-line="810" selection-start-column="18" selection-end-line="810" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -618,6 +599,7 @@
         <option value="$PROJECT_DIR$/src/test/scala/politrons/apple/search/BaseTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/politrons/apple/search/AlbumTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppleSearch.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/Deserializer.scala" />
       </list>
     </option>
   </component>
@@ -1783,7 +1765,7 @@
       <workItem from="1478856319570" duration="477000" />
       <workItem from="1478857390347" duration="4010000" />
       <workItem from="1478898665413" duration="707000" />
-      <workItem from="1478899503059" duration="10211000" />
+      <workItem from="1478899503059" duration="12028000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1478725508292</created>
@@ -1820,25 +1802,17 @@
       <option name="project" value="LOCAL" />
       <updated>1478899899549</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="First big refactor">
+      <created>1478953281194</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1478953281194</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AlbumTest_getDiscographyTest - 2016.11.12 at 12h 05m 58s.xml">
-      <configuration name="AlbumTest.getDiscographyTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AlbumTest_getDiscographyTest - 2016.11.12 at 12h 06m 41s.xml">
-      <configuration name="AlbumTest.getDiscographyTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 12h 07m 19s.xml">
-      <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 12h 08m 05s.xml">
-      <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 12h 10m 03s.xml">
-      <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 12h 10m 39s.xml">
       <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
     </history-entry>
@@ -1854,17 +1828,32 @@
     <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 12h 21m 00s.xml">
       <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 20h 50m 10s.xml">
+      <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 20h 52m 45s.xml">
+      <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 20h 53m 04s.xml">
+      <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 20h 59m 02s.xml">
+      <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlbumTest_getDiscographyTest_(1) - 2016.11.12 at 21h 02m 32s.xml">
+      <configuration name="AlbumTest.getDiscographyTest (1)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26883000" />
+    <option name="totallyTimeSpent" value="28700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="22" width="1241" height="778" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23133236" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23133236" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1875,7 +1864,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31693077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3377815" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1926,14 +1915,8 @@
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/test/scala/politrons/apple/search/AlbumTest.scala</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="50" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1942,20 +1925,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/exceptions/AppleAPIException.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/music/Album.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2019,13 +1988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="208" column="11" selection-start-line="208" selection-start-column="11" selection-end-line="208" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.3/a1e9c8ae4bd8ce4da2a2cb5630a09c155a6d8043/jackson-databind-2.8.3-sources.jar!/com/fasterxml/jackson/databind/ObjectMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2848" column="17" selection-start-line="2848" selection-start-column="17" selection-end-line="2848" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -2297,16 +2259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/politrons/apple/search/mocks/ItunesMock.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-          <folding>
-            <element signature="e#38#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/politrons/apple/search/BaseTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -2323,22 +2275,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppleSearch.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/politrons/apple/search/mocks/ItunesMock.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        <state relative-caret-position="285">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding>
-            <element signature="e#32#48#0" expanded="true" />
+            <element signature="e#38#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/politrons/apple/search/AlbumTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="270">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
           <folding>
             <element signature="e#32#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.3/a1e9c8ae4bd8ce4da2a2cb5630a09c155a6d8043/jackson-databind-2.8.3-sources.jar!/com/fasterxml/jackson/databind/ObjectMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="2867" column="17" selection-start-line="2867" selection-start-column="17" selection-end-line="2867" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/17178a95c4b47c0a9745cfb8d01924359824fd7c/scala-library-2.11.8-sources.jar!/scala/Predef.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="90" column="31" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppleSearch.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="e#32#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/Deserializer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+          <folding>
+            <element signature="e#38#54#0" expanded="true" />
           </folding>
         </state>
       </provider>

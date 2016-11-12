@@ -16,6 +16,7 @@ class AlbumTest extends BaseTest{
   @Test def getDiscographyTest(): Unit ={
     val albums = getDiscography("es", Some("incubus"))
     assert(albums.isDefined)
+    assert(albums.get.head.getCountry.equals("USA"))
   }
 
   @Test def deserializeAlbumsTest(): Unit = {
