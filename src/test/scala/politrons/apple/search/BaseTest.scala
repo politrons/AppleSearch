@@ -1,16 +1,19 @@
 package politrons.apple.search
 
+import java.util
+
+import com.fasterxml.jackson.databind.`type`.TypeFactory
 import com.fasterxml.jackson.databind.{DeserializationFeature, ObjectMapper}
-import politrons.apple.search.model.Results
 
 /**
   * Created by pabloperezgarcia on 11/11/2016.
   */
 class BaseTest {
 
-  def getJsonResults[T](jsonAlbums: String): Results[T] = {
+  def getJsonResults[T](json: String, clazz:Class[T]): util.ArrayList[T] = {
     val mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-    mapper.readValue(jsonAlbums, classOf[Results[T]])
+    val typeFactory = TypeFactory.defaultInstance()
+    mapper.readValue(json, typeFactory.constructCollectionType(classOf[util.ArrayList[T]],clazz))
   }
 
 }

@@ -1,37 +1,53 @@
 package politrons.apple.search
 
+import java.util
+
 import appleSearch.exceptions.AppleAPIException
 import appleSearch.model.app.Application
 import appleSearch.model.movie.Movie
+import com.fasterxml.jackson.databind.`type`.{CollectionType, TypeFactory}
 import com.fasterxml.jackson.databind.{DeserializationFeature, ObjectMapper}
+import play.libs.Json
 import politrons.apple.search.http.HttpClient._
-import politrons.apple.search.implicits.AppleUtils.optionUtils
-import politrons.apple.search.model.Results
+import politrons.apple.search.implicits.AppleUtils.stringUtils
 import politrons.apple.search.model.music.Album
-import scala.util.parsing.json.JSON._
+
+import scala.collection.JavaConverters._
+import scala.util.Try
 import scalaj.http.{HttpRequest, HttpResponse}
-import implicits.AppleUtils.{stringUtils}
+
 /**
   * Created by pabloperezgarcia on 08/11/2016.
-  */object AppleSearch {
+  */
+object AppleSearch {
 
   private val API: String = "itunes.apple.com/search?term="
 
   val mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+  val typeFactory = TypeFactory.defaultInstance()
+
+  def deserialize[T](json: String, clazz: Class[T]): List[T] = {
+    val result: util.ArrayList[T] = mapper.readValue(json, getCollectionType(clazz))
+    result.asScala.toList
+  }
 
   //Music
 
-  def getDiscography(country: String, artist: Option[String]): List[Album] = {
-    if(artist.isEmpty){
+  def getCollectionType[T](clazz: Class[T]): CollectionType = {
+    typeFactory.constructCollectionType(classOf[util.ArrayList[T]], clazz)
+  }
+
+  def getDiscography(country: String, artist: Option[String]): Option[List[Album]] = {
+    if (artist.isEmpty) {
       throw new IllegalArgumentException
     }
-    attachVideoClips(country, artist.get, findAlbums(artist.get))
+    Try(attachVideoClips(country, artist.get, findAlbums(artist.get))).toOption
   }
 
   private def findAlbums(artist: String): List[Album] = {
     get(s"$API${artist.replace(" ", "+")}", asJson, "https")
-    val results = mapper.readValue(lastResponse.get, classOf[Results[Album]])
-    results.getResults.asInstanceOf[List[Album]]
+    val albums = deserialize[Album](lastResponse.get, classOf[Album])
+    albums
   }
 
   private def attachVideoClips(country: String, artist: String, albums: List[Album]): List[Album] = {
@@ -42,40 +58,43 @@ import implicits.AppleUtils.{stringUtils}
 
   //Apps
 
-  def getApplications(country: String, app: Option[String]): List[Application] = {
-    if(app.isEmpty){
+  def getApplications(country: String, app: Option[String]): Option[List[Application]] = {
+    if (app.isEmpty) {
       throw new IllegalArgumentException
     }
-    findApps(country, app.get)
+    Try(findApps(country, app.get)).toOption
   }
 
   private def findApps(country: String, app: String): List[Application] = {
     get(s"$API${app.createQuery(country, "software")}", asJson, "https")
-    val results =mapper.readValue(lastResponse.get, classOf[Results[Application]])
-    results.getResults.asInstanceOf[List[Application]]
+    deserialize(lastResponse.get, classOf[Application]).asInstanceOf[List[Application]]
+    //    val results = mapper.readValue(lastResponse.get, classOf[Results[Application]])
+    //    results.getResults.asInstanceOf[List[Application]]
 
   }
 
   //Movies
 
-  def getMovies(country: String, title: Option[String]): List[Movie] = {
-    if(title.isEmpty){
+  def getMovies(country: String, title: Option[String]): Option[List[Movie]] = {
+    if (title.isEmpty) {
       throw new IllegalArgumentException
     }
-    findMovies(country, title.get)
+    Try(findMovies(country, title.get)).toOption
   }
 
   private def findMovies(country: String, movie: String): List[Movie] = {
     get(s"$API${movie.createQuery(country, "movie")}", asJson, "https")
-    val results = mapper.readValue(lastResponse.get, classOf[Results[Movie]])
-    results.getResults.asInstanceOf[List[Movie]]
+    deserialize(lastResponse.get, classOf[Movie]).asInstanceOf[List[Movie]]
+
+    //    val results = mapper.readValue(lastResponse.get, classOf[Results[Movie]])
+    //    results.getResults.asInstanceOf[List[Movie]]
   }
 
   private def asJson: (HttpRequest) => String = {
     request =>
       val response: HttpResponse[String] = request.asString
       if (response.isSuccess) {
-        parseFull(response.body).asString
+        Json.parse(response.body).at("/results").toString
       } else {
         throw new AppleAPIException(s"Error: $response")
       }

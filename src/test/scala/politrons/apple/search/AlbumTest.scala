@@ -1,5 +1,7 @@
+package politrons.apple.search
+
 import org.junit.Test
-import politrons.apple.search.BaseTest
+import politrons.apple.search.AppleSearch._
 import politrons.apple.search.mocks.ItunesMock
 import politrons.apple.search.model.music.Album
 
@@ -8,10 +10,18 @@ import politrons.apple.search.model.music.Album
   */
 class AlbumTest extends BaseTest{
 
+  /**
+    * This sort of test require internet connection.
+    */
+  @Test def getDiscographyTest(): Unit ={
+    val albums = getDiscography("es", Some("incubus"))
+    assert(albums.isDefined)
+  }
 
-  @Test def deserializeAlbums(): Unit = {
-    val albums =  getJsonResults[Album](ItunesMock.mockMusic())
-    assert(!albums.getResults.isEmpty)
+  @Test def deserializeAlbumsTest(): Unit = {
+    val albums =  getJsonResults[Album] (ItunesMock.mockMusic(),classOf[Album])
+    assert(!albums.isEmpty)
+    assert(albums.get(0).getCountry.equals("USA"))
   }
 
 }

@@ -10,8 +10,8 @@ import politrons.apple.search.BaseTest
 class ApplicationTest extends BaseTest {
 
   @Test def deserializeMovies(): Unit = {
-    val apps =  getJsonResults[Application](AppleStoreMock.mockApps())
-    assert(!apps.getResults.isEmpty)
+    val apps =  getJsonResults[Application](AppleStoreMock.mockApps(), classOf[Application])
+    assert(!apps.isEmpty)
   }
 
 }

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.typesafe.play:play-iteratees_2.11:2.5.9">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.play/play-iteratees_2.11/2.5.9/2a2607f5b9d968572b3bf69140b05276e2801e0b/play-iteratees_2.11-2.5.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.play/play-iteratees_2.11/2.5.9/6c1e87a99115d1bdcd8eeb97a788f876cfb067fc/play-iteratees_2.11-2.5.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

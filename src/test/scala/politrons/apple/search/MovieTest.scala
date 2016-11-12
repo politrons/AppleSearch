@@ -10,8 +10,8 @@ import org.junit.Test
 class MovieTest extends BaseTest{
 
   @Test def deserializeMovies(): Unit = {
-    val movies =  getJsonResults[Movie](AppleTvMock.mockApps())
-    assert(!movies.getResults.isEmpty)
+    val movies =  getJsonResults[Movie](AppleTvMock.mockApps(), classOf[Movie])
+    assert(!movies.isEmpty)
   }
 
 }
