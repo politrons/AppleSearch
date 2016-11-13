@@ -89,8 +89,8 @@
       <file leaf-file-name="AlbumTest.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/politrons/apple/search/AlbumTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#32#53#0" expanded="true" />
               </folding>
@@ -600,9 +600,9 @@
         <option value="$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppSearch.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppleSearch.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/music/Music.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/music/Album.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/AppleBase.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/politrons/apple/search/AlbumTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/music/Album.scala" />
       </list>
     </option>
   </component>
@@ -1850,7 +1850,7 @@
       <workItem from="1478856319570" duration="477000" />
       <workItem from="1478857390347" duration="4010000" />
       <workItem from="1478898665413" duration="707000" />
-      <workItem from="1478899503059" duration="18173000" />
+      <workItem from="1478899503059" duration="18423000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1478725508292</created>
@@ -1922,13 +1922,17 @@
       <option name="project" value="LOCAL" />
       <updated>1479033884146</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add implicits">
+      <created>1479034332879</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1479034332879</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="politrons_apple_search_in_AppleSearch_test - 2016.11.12 at 21h 23m 41s.xml">
-      <configuration name="politrons.apple.search in AppleSearch_test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="politrons_apple_search_in_AppleSearch_test - 2016.11.12 at 21h 24m 15s.xml">
       <configuration name="politrons.apple.search in AppleSearch_test" configurationId="JUnit" />
     </history-entry>
@@ -1956,9 +1960,12 @@
     <history-entry file="politrons_apple_search_in_AppleSearch_test - 2016.11.13 at 10h 51m 35s.xml">
       <configuration name="politrons.apple.search in AppleSearch_test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="politrons_apple_search_in_AppleSearch_test - 2016.11.13 at 10h 56m 05s.xml">
+      <configuration name="politrons.apple.search in AppleSearch_test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34845000" />
+    <option name="totallyTimeSpent" value="35095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="22" width="1241" height="778" extended-state="6" />
@@ -2017,7 +2024,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="56" />
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2405,16 +2412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/music/Album.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="e#44#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/AppleSearch.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -2422,14 +2419,6 @@
           <folding>
             <element signature="e#32#79#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/AppleBase.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2441,10 +2430,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/AppleBase.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/politrons/apple/search/model/music/Album.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <element signature="e#44#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/politrons/apple/search/AlbumTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#32#53#0" expanded="true" />
           </folding>

@@ -13,7 +13,7 @@ class AlbumTest extends BaseTest {
     * This sort of test require internet connection.
     */
   @Test def getDiscographyTest(): Unit = {
-    val album = new Album(artistName = "incubus", storeCountry = "es")
+    val album = new Album(artistName = "incubus", country = "es")
     val albums = album.find()
     assert(albums.isDefined)
     assert(albums.get.head.getCountry.equals("USA"))
