@@ -9,20 +9,20 @@ import politrons.apple.search.AppleSearch.movie
 class Movie(artistName: String = "",
             trackName: String = "",
             country: String = "",
-            val previewUrl: String="",
-            val trackViewUrl: String="",
-            val trackRentalPrice: String="",
-            val trackPrice: String="",
-            val collectionHdPrice: String="",
-            val primaryGenreName: String="",
-            val artworkUrl100: String=""
+            previewUrl: String = "",
+            trackViewUrl: String = "",
+            trackRentalPrice: String = "",
+            trackPrice: String = "",
+            collectionHdPrice: String = "",
+            primaryGenreName: String = "",
+            artworkUrl100: String = ""
            ) extends AppleBase(artistName, trackName, country) {
 
   def this() {
-    this("", "")
+    this("")
   }
 
-  def find(): Option[List[Movie]] ={
+  def find(): Option[List[Movie]] = {
     this.getMovies(country, artistName)
   }
 
