@@ -21,6 +21,8 @@ class Application(artistName: String = "",
     this.getApplications(country, artistName)
   }
 
+  def getArtistViewUrl: String = artistViewUrl
+
   def getCountry: String = country
 
   def getPrice: String = price
