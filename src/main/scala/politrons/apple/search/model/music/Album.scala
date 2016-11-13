@@ -9,6 +9,7 @@ import politrons.apple.search.AppleSearch.music
   */
 class Album(artistName: String="",
             trackName: String="",
+            storeCountry:String="",
             collectionName: String="",
             primaryGenreName: String="",
             country: String="",
@@ -18,7 +19,7 @@ class Album(artistName: String="",
             previewUrl: String="",
             artworkUrl100: String=""
            )
-  extends AppleBase(artistName, trackName) {
+  extends AppleBase(artistName, trackName, storeCountry) {
 
   def this() {
     this("")
