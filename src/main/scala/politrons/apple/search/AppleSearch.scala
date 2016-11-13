@@ -55,18 +55,21 @@ object AppleSearch extends Deserializer {
     }
 
   }
-  //Movies
 
-  def getMovies(country: String, title: Option[String]): Option[List[Movie]] = {
-    if (title.isEmpty) {
-      throw new IllegalArgumentException
+  implicit class movie(movie:Movie) {
+
+    def getMovies(country: String, title: String): Option[List[Movie]] = {
+      if (title.isEmpty) {
+        throw new IllegalArgumentException
+      }
+      Try(findMovies(country, title)).toOption
     }
-    Try(findMovies(country, title.get)).toOption
-  }
 
-  private def findMovies(country: String, movie: String): List[Movie] = {
-    get(s"$API${movie.createQuery(country, "movie")}", asJson, "https")
-    deserialize(lastResponse.get, classOf[Movie])
+    private def findMovies(country: String, movie: String): List[Movie] = {
+      get(s"$API${movie.createQuery(country, "movie")}", asJson, "https")
+      deserialize(lastResponse.get, classOf[Movie])
+    }
+
   }
 
   private def asJson: (HttpRequest) => String = {
