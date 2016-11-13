@@ -11,7 +11,6 @@ import politrons.apple.search.model.music.Album
 
 import scala.util.Try
 import scalaj.http.{HttpRequest, HttpResponse}
-
 /**
   * Created by pabloperezgarcia on 08/11/2016.
   */
