@@ -6,7 +6,7 @@ import appleSearch.model.movie.Movie
 import play.libs.Json
 import politrons.apple.search.http.HttpClient._
 import politrons.apple.search.implicits.AppleUtils.stringUtils
-import politrons.apple.search.model.Deserializer._
+import politrons.apple.search.model.Deserializer
 import politrons.apple.search.model.music.Album
 
 import scala.util.Try
@@ -14,7 +14,7 @@ import scalaj.http.{HttpRequest, HttpResponse}
 /**
   * Created by pabloperezgarcia on 08/11/2016.
   */
-object AppleSearch {
+object AppleSearch extends Deserializer {
 
   private val API: String = "itunes.apple.com/search?term="
 

@@ -11,7 +11,7 @@ import scala.collection.JavaConverters._
 /**
   * Created by pabloperezgarcia on 12/11/2016.
   */
-object Deserializer {
+trait Deserializer {
 
   val mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
   val typeFactory = TypeFactory.defaultInstance()
