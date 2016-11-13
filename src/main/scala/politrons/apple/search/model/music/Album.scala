@@ -6,19 +6,19 @@ import appleSearch.model.music.Song
 /**
   * Created by pabloperezgarcia on 27/8/16.
   */
-class Album(collectionName: String = "",
-            primaryGenreName: String = "",
-            country: String = "",
-            trackPrice: String = "",
-            trackViewUrl: String = "",
-            releaseDate: String = "",
-            previewUrl: String = "",
-            artworkUrl100: String = ""
+class Album(collectionName: String ,
+            primaryGenreName: String ,
+            country: String ,
+            trackPrice: String ,
+            trackViewUrl: String ,
+            releaseDate: String ,
+            previewUrl: String ,
+            artworkUrl100: String 
            )
   extends AppleBase {
 
   def this() {
-    this("")
+    this("","","","","","","","")
   }
 
   def getCollectionName: String = collectionName

@@ -27,7 +27,7 @@ object AppleUtils {
 
   implicit class jsonArrayUtils(jsonArray: JSONArray) {
 
-    def first: JSONObject = new JSONObject(jsonArray.list.head.asInstanceOf[Map[String, Any]])
+    def first: JSONObject = JSONObject(jsonArray.list.head.asInstanceOf[Map[String, Any]])
 
     def asFirstStringMap: Map[String, Any] = jsonArray.list.head.asInstanceOf[Map[String, Any]]
 

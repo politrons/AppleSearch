@@ -9,9 +9,9 @@ trait HttpExtensions {
   def READ_TIMEOUT: Int = 60000
 
   implicit class HttpRequestExt(request: HttpRequest) {
+
     def sendJson: HttpResponse[String] = {
-      request.header("content-type", "application/json")
-      request.asString
+      request.header("content-type", "application/json").asString
     }
 
     def jsonContent: HttpRequest = {
