@@ -7,18 +7,18 @@ import politrons.apple.search.AppleSearch.music
 /**
   * Created by pabloperezgarcia on 27/8/16.
   */
-class Album(artistName: String="",
-            trackName: String="",
-            collectionName: String="",
-            primaryGenreName: String="",
-            country: String="",
-            trackPrice: String="",
-            trackViewUrl: String="",
-            releaseDate: String="",
-            previewUrl: String="",
-            artworkUrl100: String=""
+class Album(artistName: String = "",
+            trackName: String = "",
+            country: String = "",
+            var collectionName: String = "",
+            var primaryGenreName: String = "",
+            var trackPrice: String = "",
+            var trackViewUrl: String = "",
+            var releaseDate: String = "",
+            var previewUrl: String = "",
+            var artworkUrl100: String = ""
            )
-  extends AppleBase(artistName, trackName) {
+  extends AppleBase(artistName, trackName, country) {
 
   def this() {
     this("")

@@ -31,3 +31,31 @@ dependencies {
     compile 'com.typesafe.play:play-json_2.11:2.5.9'
 }
 
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': version
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14'
+}
+
+
+model {
+    components {
+        main(JvmLibrarySpec) {
+            api {
+                exports 'src.main.scala'
+            }
+        }
+    }
+}
+
+

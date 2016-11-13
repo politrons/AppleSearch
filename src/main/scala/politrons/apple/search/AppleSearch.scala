@@ -20,8 +20,6 @@ object AppleSearch extends Deserializer {
 
   implicit class music(music: Album) {
 
-    //Music
-
     def getDiscography(country: String, artist: String): Option[List[Album]] = {
       if (artist.isEmpty) {
         throw new IllegalArgumentException
@@ -42,20 +40,21 @@ object AppleSearch extends Deserializer {
 
   }
 
-  //Apps
+  implicit class application(app :Application) {
 
-  def getApplications(country: String, app: Option[String]): Option[List[Application]] = {
-    if (app.isEmpty) {
-      throw new IllegalArgumentException
+    def getApplications(country: String, app: String): Option[List[Application]] = {
+      if (app.isEmpty) {
+        throw new IllegalArgumentException
+      }
+      Try(findApps(country, app)).toOption
     }
-    Try(findApps(country, app.get)).toOption
-  }
 
-  private def findApps(country: String, app: String): List[Application] = {
-    get(s"$API${app.createQuery(country, "software")}", asJson, "https")
-    deserialize(lastResponse.get, classOf[Application])
-  }
+    private def findApps(country: String, app: String): List[Application] = {
+      get(s"$API${app.createQuery(country, "software")}", asJson, "https")
+      deserialize(lastResponse.get, classOf[Application])
+    }
 
+  }
   //Movies
 
   def getMovies(country: String, title: Option[String]): Option[List[Movie]] = {

@@ -16,13 +16,13 @@ class AlbumTest extends BaseTest {
     val album = new Album(artistName = "incubus", country = "es")
     val albums = album.find()
     assert(albums.isDefined)
-    assert(albums.get.head.getCountry.equals("USA"))
+    assert(albums.get.head.country.equals("USA"))
   }
 
   @Test def deserializeAlbumsTest(): Unit = {
     val albums = getJsonResults[Album](ItunesMock.mockMusic(), classOf[Album])
     assert(!albums.isEmpty)
-    assert(albums.get(0).getCountry.equals("USA"))
+    assert(albums.get(0).country.equals("USA"))
   }
 
 }
