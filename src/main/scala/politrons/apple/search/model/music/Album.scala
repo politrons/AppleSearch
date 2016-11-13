@@ -2,23 +2,30 @@ package politrons.apple.search.model.music
 
 import appleSearch.model.AppleBase
 import appleSearch.model.music.Song
+import politrons.apple.search.AppleSearch.music
 
 /**
   * Created by pabloperezgarcia on 27/8/16.
   */
-class Album(collectionName: String ,
-            primaryGenreName: String ,
-            country: String ,
-            trackPrice: String ,
-            trackViewUrl: String ,
-            releaseDate: String ,
-            previewUrl: String ,
-            artworkUrl100: String 
+class Album(artistName: String="",
+            trackName: String="",
+            collectionName: String="",
+            primaryGenreName: String="",
+            country: String="",
+            trackPrice: String="",
+            trackViewUrl: String="",
+            releaseDate: String="",
+            previewUrl: String="",
+            artworkUrl100: String=""
            )
-  extends AppleBase {
+  extends AppleBase(artistName, trackName) {
 
   def this() {
-    this("","","","","","","","")
+    this("")
+  }
+
+  def find(): Option[List[Album]] = {
+    this.getDiscography(country, getArtistName)
   }
 
   def getCollectionName: String = collectionName

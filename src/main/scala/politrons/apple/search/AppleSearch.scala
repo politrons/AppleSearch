@@ -19,24 +19,28 @@ object AppleSearch {
 
   private val API: String = "itunes.apple.com/search?term="
 
-  //Music
+  implicit class music(music: Album) {
 
-  def getDiscography(country: String, artist: Option[String]): Option[List[Album]] = {
-    if (artist.isEmpty) {
-      throw new IllegalArgumentException
+    //Music
+
+    def getDiscography(country: String, artist: String): Option[List[Album]] = {
+      if (artist.isEmpty) {
+        throw new IllegalArgumentException
+      }
+      Try(attachVideoClips(country, artist, findAlbums(artist))).toOption
     }
-    Try(attachVideoClips(country, artist.get, findAlbums(artist.get))).toOption
-  }
 
-  private def findAlbums(artist: String): List[Album] = {
-    get(s"$API${artist.replace(" ", "+")}", asJson, "https")
-    deserialize[Album](lastResponse.get, classOf[Album])
-  }
+    private def findAlbums(artist: String): List[Album] = {
+      get(s"$API${artist.replace(" ", "+")}", asJson, "https")
+      deserialize[Album](lastResponse.get, classOf[Album])
+    }
 
-  private def attachVideoClips(country: String, artist: String, albums: List[Album]): List[Album] = {
-    get(s"$API${artist.createQuery(country, "musicVideo")}", asJson, "https")
-    albums
-    //    DiscographyF.attachVideos(lastResponse.get, albums)
+    private def attachVideoClips(country: String, artist: String, albums: List[Album]): List[Album] = {
+      get(s"$API${artist.createQuery(country, "musicVideo")}", asJson, "https")
+      albums
+      //    DiscographyF.attachVideos(lastResponse.get, albums)
+    }
+
   }
 
   //Apps
