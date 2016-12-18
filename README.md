@@ -13,9 +13,6 @@ You need to follow the next steps in order to start using the library.
 * Create a new instance of class Album, or extend this class and insanciate with the artist name and country
     val album = new Album(artistName = "incubus", country = "es")
     ```
-
-* Use the method find()
-
     List[Album] discography = album.find()
     ```
 
