@@ -2,7 +2,7 @@ Author Pablo Perez Garcia
 
 # Apple Search
 
-![My image](src/main/resources/img/apple.jpeg)
+![My image](src/main/resources/img/apple.jpg)
 
 Open source library in scala to consume public Apple API for music, movies and apps.
 
