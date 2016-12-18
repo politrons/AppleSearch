@@ -21,7 +21,6 @@ dependencies {
     compile 'io.reactivex:rxscala_2.11:0.26.1'
     compile 'junit:junit:4.11'
     compile 'org.clapper:classutil_2.11:1.0.13'
-    compile "org.scalatest:scalatest_2.11:2+"
     compile "org.scala-lang:scala-compiler:2.11.8"
     compile "org.scala-lang:scala-library:2.11.8"
     compile "org.scalaj:scalaj-http_2.11:2.3.0"
@@ -29,6 +28,8 @@ dependencies {
     compile 'com.github.scala-incubator.io:scala-io-file_2.10:0.4.3'
     compile 'org.json4s:json4s-jackson_2.10:3.4.1'
     compile 'com.typesafe.play:play-json_2.11:2.5.9'
+    compile 'com.typesafe.play:play-cache_2.11:2.5.9'
+
 }
 
 //create a single Jar with all dependencies

@@ -3,44 +3,54 @@ package politrons.apple.search
 import appleSearch.exceptions.AppleAPIException
 import appleSearch.model.app.Application
 import appleSearch.model.movie.Movie
+import appleSearch.model.music.VideoClip
 import play.libs.Json
 import politrons.apple.search.http.HttpClient._
-import politrons.apple.search.implicits.AppleUtils.stringUtils
+import politrons.apple.search.implicits.Utils.stringUtils
 import politrons.apple.search.model.Deserializer
 import politrons.apple.search.model.music.Album
 
 import scala.util.Try
 import scalaj.http.{HttpRequest, HttpResponse}
+
 /**
   * Created by pabloperezgarcia on 08/11/2016.
   */
-object AppleSearch extends Deserializer {
+package object AppleSearch extends Deserializer {
 
   private val API: String = "itunes.apple.com/search?term="
 
-  implicit class music(music: Album) {
+  implicit class music(album: Album) {
 
     def getDiscography(country: String, artist: String): Option[List[Album]] = {
       if (artist.isEmpty) {
-        throw new IllegalArgumentException
+        throw new scala.IllegalArgumentException
       }
-      Try(attachVideoClips(country, artist, findAlbums(artist))).toOption
+//      Try(findAllAlbums(country, artist)).toOption
+      Try(findAlbums(artist)).toOption
+
     }
+
+//    def findAllAlbums(country: String, artist: String): List[Album] = {
+//      for {
+//        albums: List[Album] <- findAlbums(artist)
+//        videos: List[VideoClip] <- findVideos(country, artist)
+//      } yield album.attachVideoClips(albums, videos).head
+//    }
 
     private def findAlbums(artist: String): List[Album] = {
       get(s"$API${artist.replace(" ", "+")}", asJson, "https")
-      deserialize[Album](lastResponse.get, classOf[Album])
+      val albums = deserialize[Album](lastResponse.get, classOf[Album])
+      album.mergeSongs(albums)
     }
 
-    private def attachVideoClips(country: String, artist: String, albums: List[Album]): List[Album] = {
+    private def findVideos(country: String, artist: String): List[VideoClip] = {
       get(s"$API${artist.createQuery(country, "musicVideo")}", asJson, "https")
-      albums
-      //    DiscographyF.attachVideos(lastResponse.get, albums)
+      deserialize[VideoClip](lastResponse.get, classOf[VideoClip])
     }
-
   }
 
-  implicit class application(app :Application) {
+  implicit class application(app: Application) {
 
     def getApplications(country: String, app: String): Option[List[Application]] = {
       if (app.isEmpty) {
@@ -56,7 +66,7 @@ object AppleSearch extends Deserializer {
 
   }
 
-  implicit class movie(movie:Movie) {
+  implicit class movie(movie: Movie) {
 
     def getMovies(country: String, title: String): Option[List[Movie]] = {
       if (title.isEmpty) {
@@ -69,7 +79,6 @@ object AppleSearch extends Deserializer {
       get(s"$API${movie.createQuery(country, "movie")}", asJson, "https")
       deserialize(lastResponse.get, classOf[Movie])
     }
-
   }
 
   private def asJson: (HttpRequest) => String = {

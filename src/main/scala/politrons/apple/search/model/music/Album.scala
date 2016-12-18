@@ -1,7 +1,7 @@
 package politrons.apple.search.model.music
 
 import appleSearch.model.AppleBase
-import appleSearch.model.music.Song
+import appleSearch.model.music.{Song, VideoClip}
 import politrons.apple.search.AppleSearch.music
 
 /**
@@ -49,11 +49,37 @@ class Album(artistName: String = "",
     this
   }
 
-  var songs: List[Song] = List()
-  //    List(new Song(trackName, previewUrl, trackPrice, trackViewUrl))
+  var songs: List[Song] = List[Song]()
 
-  def addSongs(song: Song) {
+  def addSongs(song: Song): Album = {
     songs = songs.::(song)
+    this
+  }
+
+  def attachVideoClips(albums: List[Album], videos: List[VideoClip]): List[Album] = {
+    albums.toStream
+      .flatMap(album => videos.toStream
+        .filter(video => video.trackName.equals(album.trackName))
+        .map(video => album.replace(findSong(album.songs, video.trackName))))
+      .toList
+  }
+
+  def mergeSongs(albums: List[Album]): List[Album] = {
+    albums.toStream
+      .flatMap(album => albums.toStream
+        .filter(album1 => album1.trackName.equals(album.trackName))
+        .map(album1 => album.addSongs(createSong(album1))))
+      .toList
+  }
+
+  private def findSong(songs: List[Song], trackName: String): Song = {
+    songs.toStream
+      .filter(song => song.trackName.equals(trackName))
+      .head
+  }
+
+  private def createSong(album1: Album): Song = {
+    new Song(album1.getPreviewUrl, album1.getTrackPrice, album1.getTrackViewUrl)
   }
 
 }

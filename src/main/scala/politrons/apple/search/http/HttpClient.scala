@@ -6,7 +6,7 @@ object HttpClient extends HttpExtensions {
 
   var lastResponse: Option[String] = None
 
-  def get(url: String, function:HttpRequest=>String, protocol: String = "appleSearch/http") {
+  def get(url: String, function:HttpRequest=>String, protocol: String = "http") {
     lastResponse = Some(
       Http(s"$protocol://$url")
         .timeout(connTimeoutMs = CONNECT_TIMEOUT, readTimeoutMs = READ_TIMEOUT)
@@ -15,7 +15,7 @@ object HttpClient extends HttpExtensions {
     )
   }
 
-  def post(url: String, function:(HttpRequest)=>String, protocol: String = "appleSearch/http") {
+  def post(url: String, function:(HttpRequest)=>String, protocol: String = "http") {
     lastResponse = Some(
       Http(s"$protocol://$url").option(HttpOptions.allowUnsafeSSL)
         .timeout(connTimeoutMs = CONNECT_TIMEOUT, readTimeoutMs = READ_TIMEOUT)

@@ -5,7 +5,7 @@ import scala.util.parsing.json.{JSONArray, JSONObject}
 /**
   * Created by pabloperezgarcia on 27/8/16.
   */
-object AppleUtils {
+object Utils {
 
   implicit class anyUtils(any: Any) {
     def asStringMap: Map[String, Any] = any.asInstanceOf[Map[String, Any]]

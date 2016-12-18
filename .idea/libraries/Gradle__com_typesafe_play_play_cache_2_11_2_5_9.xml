@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.typesafe.play:play-cache_2.11:2.5.9">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.play/play-cache_2.11/2.5.9/171b0ef2e01215b22a0cfaa26f917305a4c4a6d/play-cache_2.11-2.5.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.play/play-cache_2.11/2.5.9/95733a75818b54b31749c4396e636e727cc358ff/play-cache_2.11-2.5.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

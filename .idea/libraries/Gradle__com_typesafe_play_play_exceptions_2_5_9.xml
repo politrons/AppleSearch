@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.typesafe.play:play-exceptions:2.5.9">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.play/play-exceptions/2.5.9/81661d4b183dd9f831e1ba3d06ab4d14c80ea4c6/play-exceptions-2.5.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.play/play-exceptions/2.5.9/80eae9eeb181a5c6431932417029f1695844439d/play-exceptions-2.5.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

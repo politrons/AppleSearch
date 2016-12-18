@@ -1,5 +1,7 @@
 package mocks
 
+import java.net.URL
+
 import play.libs.Json
 
 import scala.io.Source
@@ -10,7 +12,9 @@ import scala.io.Source
 object AppleTvMock {
 
   def mockApps(): String = {
-    val source = Source.fromURL(getClass.getResource("/movie.json")).getLines.mkString
+    val resource: URL = getClass.getResource("/movie.json")
+    resource.toURI
+    val source = Source.fromURL(resource).getLines.mkString
     Json.parse(source).at("/results").toString
   }
 
