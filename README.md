@@ -28,39 +28,39 @@ You need to follow the next steps in order to start using the library.
 * The structure of the classes looks like:
 
     * Album
-```
-class Application(artistName: String = "",
-                  artistViewUrl: String = "",
-                  trackViewUrl: String = "",
-                  country: String = "",
-                  price: String = "",
-                  artworkUrl100: String = ""
-                 ) extends AppleBase(artistName,null, country) {}
-```
+    ```
+    class Application(artistName: String = "",
+                      artistViewUrl: String = "",
+                      trackViewUrl: String = "",
+                      country: String = "",
+                      price: String = "",
+                      artworkUrl100: String = ""
+                     ) extends AppleBase(artistName,null, country) {}
+    ```
     * Movie
-```
-class Movie(artistName: String = "",
-            trackName: String = "",
-            country: String = "",
-            previewUrl: String = "",
-            trackViewUrl: String = "",
-            trackRentalPrice: String = "",
-            trackPrice: String = "",
-            collectionHdPrice: String = "",
-            primaryGenreName: String = "",
-            artworkUrl100: String = ""
-           ) extends AppleBase(artistName, trackName, country) {}
-```
+    ```
+    class Movie(artistName: String = "",
+                trackName: String = "",
+                country: String = "",
+                previewUrl: String = "",
+                trackViewUrl: String = "",
+                trackRentalPrice: String = "",
+                trackPrice: String = "",
+                collectionHdPrice: String = "",
+                primaryGenreName: String = "",
+                artworkUrl100: String = ""
+               ) extends AppleBase(artistName, trackName, country) {}
+    ```
     * Application
-```
-class Application(artistName: String = "",
-                  artistViewUrl: String = "",
-                  trackViewUrl: String = "",
-                  country: String = "",
-                  price: String = "",
-                  artworkUrl100: String = ""
-                 ) extends AppleBase(artistName,null, country) {}
-```
+    ```
+    class Application(artistName: String = "",
+                      artistViewUrl: String = "",
+                      trackViewUrl: String = "",
+                      country: String = "",
+                      price: String = "",
+                      artworkUrl100: String = ""
+                     ) extends AppleBase(artistName,null, country) {}
+    ```
 
 
 You can see how the library works running the unit test:
