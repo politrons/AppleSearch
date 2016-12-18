@@ -109,8 +109,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1794,7 +1794,7 @@
       <workItem from="1482065881780" duration="262000" />
       <workItem from="1482066237679" duration="425000" />
       <workItem from="1482066722953" duration="428000" />
-      <workItem from="1482067419836" duration="2084000" />
+      <workItem from="1482067419836" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1478725508292</created>
@@ -1943,7 +1943,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482069950109</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Refactor Movie">
+      <created>1482069969821</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1482069969821</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1979,7 +1986,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67928000" />
+    <option name="totallyTimeSpent" value="68121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="22" width="1241" height="778" extended-state="6" />
@@ -2441,8 +2448,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>

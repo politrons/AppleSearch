@@ -10,15 +10,14 @@ You need to follow the next steps in order to start using the library.
 
 * Add the library in your project
 
-* Create a new instance of class Album, or extend this class and insanciate with the artist name and country
+* Use one of the library classes( Album, Movie, Application ) or extend one of those and insanciate it with the artist name and country
     val album = new Album(artistName = "incubus", country = "es")
     ```
     List[Album] discography = album.find()
     ```
 
-* Automatically you will received all albums of that artist for that country.
+* Automatically you will received a collection with all albums, movies or applicaiton of that artist for that country.
 
-Reuse those steps for Movies and Applications
 
 You can see how the library works running the unit test:
 
