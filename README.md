@@ -10,10 +10,10 @@ You need to follow the next steps in order to start using the library.
 
 * Add the library in your project.
     ```
-    gradle clean build` --> create the jar
+    gradle clean build --> create the jar
     /build/libs/AppleSearch-1.0.jar --> copy the library
     mv AppleSearch-1.0.jar /projectFolder/lib --> move it in your playFramework lib folder project
-    ```
+    ``
 
 * Use one of the library classes( Album, Movie, Application ) or extend one of those and insanciate it with the artist name and country.
 
