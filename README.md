@@ -57,6 +57,11 @@ You need to follow the next steps in order to start using the library.
                      ) extends AppleBase(artistName,null, country) {}
     ```
 
+* In this library we deserialize from the Apple API what we consider are the most important data for consumers.
+  But as we mention above, you can always extend the base classes and add extra attributes if you need it.
+  Here you can see the json templates that Apple return from their API
+
+  * [Templates] (src/test/resources)
 
 You can see how the library works running the unit test:
 
