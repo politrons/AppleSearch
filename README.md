@@ -1,6 +1,6 @@
 Author Pablo Perez Garcia
 
-# AppleSearch
+# Apple Search
 
 ![My image](src/main/resources/img/apple.jpeg)
 
