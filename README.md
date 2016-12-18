@@ -3,8 +3,6 @@ Author Pablo Perez Garcia
 
 ![My image](src/main/resources/img/apple.jpg)
 
-# Apple Search
-
 Open source library in scala to consume public Apple API for music, movies and apps.
 
 You need to follow the next steps in order to start using the library.
