@@ -28,13 +28,18 @@ You need to follow the next steps in order to start using the library.
 * The structure of the classes looks like:
 
     ```
-    class Application(artistName: String = "",
-                      artistViewUrl: String = "",
-                      trackViewUrl: String = "",
-                      country: String = "",
-                      price: String = "",
-                      artworkUrl100: String = ""
-                     ) extends AppleBase(artistName,null, country) {}
+    class Album(artistName: String = "",
+                trackName: String = "",
+                country: String = "",
+                var collectionName: String = "",
+                var primaryGenreName: String = "",
+                var trackPrice: String = "",
+                var trackViewUrl: String = "",
+                var releaseDate: String = "",
+                var previewUrl: String = "",
+                var artworkUrl100: String = ""
+               )
+      extends AppleBase(artistName, trackName, country) {}
 
     class Movie(artistName: String = "",
                 trackName: String = "",
