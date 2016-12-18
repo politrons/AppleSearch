@@ -11,6 +11,7 @@ You need to follow the next steps in order to start using the library.
 * Add the library in your project
 
 * Use one of the library classes( Album, Movie, Application ) or extend one of those and insanciate it with the artist name and country
+
     val album = new Album(artistName = "incubus", country = "es")
     ```
     List[Album] discography = album.find()
