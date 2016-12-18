@@ -4,7 +4,7 @@ Author Pablo Perez Garcia
 
 ![My image](src/main/resources/img/apple.jpeg)
 
-Open source library to consume Apple API for music, movies and apps.
+Open source library in scala to consume public Apple API for music, movies and apps.
 
 You need to follow the next steps in order to start using the library.
 
