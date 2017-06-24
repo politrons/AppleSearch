@@ -71,7 +71,7 @@ You can see how the library works running the unit test:
 
 ![My image](src/main/resources/img/unit.png)
 
-* [Unit test] (src/test/scala/politrons/apple/search)
+* [Unit test](src/test/scala/politrons/apple/search)
 
 
 
